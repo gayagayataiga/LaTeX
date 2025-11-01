@@ -90,7 +90,18 @@
             "args": [
               "%DOCFILE%.dvi"
             ]
-          }
+          },
+          {
+          "name": "lualatex",
+          "command": "lualatex",
+          "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "-output-directory=%OUTDIR%",
+            "%DOC%"
+          ]
+        }
         ]
       }
     }
