@@ -42,7 +42,13 @@
               "uplatex",
               "dvipdfmx"
             ]
-          }
+          },
+          {
+          "name": "lualatex",
+          "tools": [
+            "lualatex"
+          ]
+        }
         ],
         "latex-workshop.latex.tools": [
           {
