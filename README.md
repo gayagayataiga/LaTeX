@@ -109,12 +109,12 @@ LaTeX Workshop settings can be customized in `.devcontainer/devcontainer.json` u
 
 ### コンパイル方法
 
-ファイルを保存すると自動的にコンパイルされます。または：
+ファイルを保存すると自動的にコンパイルされます。(現在まだエラーが発生する)
+または：
 
 ```bash
 # 日本語文書のコンパイル（推奨）
-uplatex sample_ja.tex
-dvipdfmx sample_ja.dvi
+lualatex sample_1.txt
 ```
 
 ## License
