@@ -1,122 +1,42 @@
-# LaTeX on GitHub Codespaces
+# GitHub Codespaces 上の LaTeX 環境
 
-This repository provides a fully configured LaTeX development environment for GitHub Codespaces.
+このリポジトリは、GitHub Codespaces 向けに完全に設定済みの LaTeX 開発環境を提供します。
+特に豊田工業大学の学生が機能的に困らない程度の設定をしてあります。
 
-## 🚀 Getting Started
+## 利用方法
 
-### Using GitHub Codespaces
-
-1. Click the green "Code" button on this repository
-2. Select "Codespaces" tab
-3. Click "Create codespace on main" (or your branch)
-4. Wait for the environment to build (first time may take a few minutes)
-5. Once ready, open any `.tex` file and start editing!
-
-### Features
-
-- **TeX Live Full**: Complete LaTeX distribution with all packages
-- **Japanese Support**: Full support for Japanese documents with platex/uplatex
-- **LaTeX Workshop**: VS Code extension for LaTeX editing with live preview
-- **Auto-build**: Automatically compiles on save
-- **PDF Viewer**: Built-in PDF viewer in VS Code
-
-## 📝 Sample Documents
-
-This repository includes sample documents to get you started:
-
-- `sample.tex` - English LaTeX document sample
-- `sample_ja.tex` - Japanese LaTeX document sample (日本語サンプル文書)
-
-## 🔧 Usage
-
-### Compiling LaTeX Documents
-
-The LaTeX Workshop extension will automatically compile your documents when you save them. You can also:
-
-1. Open a `.tex` file
-2. Press `Ctrl+Alt+B` (or `Cmd+Alt+B` on Mac) to build
-3. Press `Ctrl+Alt+V` (or `Cmd+Alt+V` on Mac) to view PDF
-
-### Available Compilation Recipes
-
-- **pdfLaTeX**: Standard PDF compilation
-- **pdfLaTeX x2**: Compile twice (for references and citations)
-- **platex → dvipdfmx**: For Japanese documents
-- **uplatex → dvipdfmx**: For Unicode Japanese documents (recommended)
-
-### Manual Compilation
-
-You can also compile from the terminal:
-
-```bash
-# For English documents
-pdflatex sample.tex
-
-# For Japanese documents with platex
-platex sample_ja.tex
-dvipdfmx sample_ja.dvi
-
-# For Japanese documents with uplatex (recommended)
-uplatex sample_ja.tex
-dvipdfmx sample_ja.dvi
-```
-
-## 📁 Project Structure
-
-```
-.
-├── .devcontainer/          # Codespaces configuration
-│   ├── devcontainer.json  # Codespaces settings and VS Code extensions
-│   └── Dockerfile         # Container configuration with TeX Live
-├── sample.tex             # English LaTeX sample
-├── sample_ja.tex          # Japanese LaTeX sample
-└── README.md             # This file
-```
-
-## 🛠️ Customization
-
-### Adding LaTeX Packages
-
-The environment includes `texlive-full`, which contains most LaTeX packages. If you need additional packages, you can:
-
-1. Modify `.devcontainer/Dockerfile`
-2. Add the package installation command
-3. Rebuild the container
-
-### VS Code Settings
-
-LaTeX Workshop settings can be customized in `.devcontainer/devcontainer.json` under the `customizations.vscode.settings` section.
-
-## 📚 Resources
-
-- [LaTeX Documentation](https://www.latex-project.org/help/documentation/)
-- [LaTeX Workshop Extension](https://github.com/James-Yu/LaTeX-Workshop)
-- [Overleaf Learn](https://www.overleaf.com/learn) - Great LaTeX tutorials
-
-## 日本語での説明
-
-### 使い方
+### 🚀GitHub Codespaces の利用
 
 1. このリポジトリの緑色の「Code」ボタンをクリック
 2. 「Codespaces」タブを選択
-3. 「Create codespace on main」をクリック
-4. 環境の構築を待つ（初回は数分かかります）
-5. `.tex`ファイルを開いて編集開始！
+3. 「Create codespace on main」（または作業ブランチ）をクリック
+4. 環境が構築されるのを待つ（初回は数分かかる場合がある）
+5. 準備ができたら、任意の `.tex` ファイルを開いて編集を開始
 
-### サンプル文書
+## 📝サンプル
 
-- `sample_ja.tex` - 日本語のLaTeXサンプル文書
+- `sample.tex` - 英語サンプル
+- `sample_ja.tex` - 日本語サンプル
+- `how_to_use.tex` - LaTeX書き方
 
-### コンパイル方法
+## 🔧 コンパイル方法（PDFの作り方）
 
-ファイルを保存すると自動的にコンパイルされます。(現在まだエラーが発生する)
-または：
+- 保存(Ctrl + S)すれば、自動的にoutファイルに作成される
+- その作成されたPDFをダウンロードして提出
 
-```bash
-# 日本語文書のコンパイル（推奨）
-lualatex sample_1.txt
-```
 
-## License
+# ダウンロード方法
 
-MIT License - Feel free to use this template for your own projects!
+## git clone・pullする方法
+
+このリポジトリ内の`.tex`ファイルなど、丸ごとパソコンにダウンロードする
+
+- 緑色の`< > Code`を押す
+- LocalにHTTPSがあるので押す
+- https://github.com/ユーザー名/リポジトリ名.gitというurlがあるので、それをコピー
+- ターミナル上でこのリポジトリをダウンロード(クローン)したいディレクトリをカレントディレクトリにする
+- クローンするコマンド(git clone コピーしたURL)を実行
+
+## PDF単体をダウンロードする方法
+
+Github
